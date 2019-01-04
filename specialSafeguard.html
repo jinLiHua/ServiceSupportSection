@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>专项保障集</title>
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/pagination.css">
+  <script src="js/jquery.min.js"></script>
+  <style>
+    .around-dynamic_list li a {
+      color: #000;
+    }
+    .around-dynamic_list li span{
+      float: right;
+    }
+  </style>
+</head>
+
+<body>
+  <script src="js/header.js"></script>
+  <div class="around-dynami_content">
+    <div class="around-dynamic_title">
+      <h1> 专项保障集</h1>
+      <div>
+        <a href="./index.html">
+          <i class="icon-index">
+            <img src="./img/home.png" alt="home">
+          </i>
+          首页</a>
+        <span>></span><span>专项保障集</span>
+      </div>
+    </div>
+    <div class="around-dynamic_list_title">
+      <ul class="around-dynamic_list ">
+        <li>
+            <i class="icon-point_blue"></i>
+          <a href="specialSafeguard_details.html">
+            <p>【东莞1】明生银行应用高速签名盒子，实现银企直联安全性全面提升。</p>
+            <span class="send_time">2018-12-23</span>
+          </a>
+        </li>
+         <li>
+            <i class="icon-point_blue"></i>
+          <a href="specialSafeguard_details.html">
+            <p>【东莞1】明生银行应用高速签名盒子，实现银企直联安全性全面提升。</p>
+            <span class="send_time">2018-12-23</span>
+          </a>
+        </li>
+         <li>
+            <i class="icon-point_blue"></i>
+          <a href="specialSafeguard_details.html">
+            <p>【东莞1】明生银行应用高速签名盒子，实现银企直联安全性全面提升。</p>
+            <span class="send_time">2018-12-23</span>
+          </a>
+        </li>
+         <li>
+            <i class="icon-point_blue"></i>
+          <a href="specialSafeguard_details.html">
+            <p>【东莞1】明生银行应用高速签名盒子，实现银企直联安全性全面提升。</p>
+            <span class="send_time">2018-12-23</span>
+          </a>
+        </li>
+         <li>
+            <i class="icon-point_blue"></i>
+          <a href="specialSafeguard_details.html">
+            <p>【东莞1】明生银行应用高速签名盒子，实现银企直联安全性全面提升。</p>
+            <span class="send_time">2018-12-23</span>
+          </a>
+        </li>
+         <li>
+            <i class="icon-point_blue"></i>
+          <a href="specialSafeguard_details.html">
+            <p>【东莞1】明生银行应用高速签名盒子，实现银企直联安全性全面提升。</p>
+            <span class="send_time">2018-12-23</span>
+          </a>
+        </li>
+         <li>
+            <i class="icon-point_blue"></i>
+          <a href="specialSafeguard_details.html">
+            <p>【东莞1】明生银行应用高速签名盒子，实现银企直联安全性全面提升。</p>
+            <span class="send_time">2018-12-23</span>
+          </a>
+        </li>
+         <li>
+            <i class="icon-point_blue"></i>
+          <a href="specialSafeguard_details.html">
+            <p>【东莞1】明生银行应用高速签名盒子，实现银企直联安全性全面提升。</p>
+            <span class="send_time">2018-12-23</span>
+          </a>
+        </li>
+         <li>
+            <i class="icon-point_blue"></i>
+          <a href="specialSafeguard_details.html">
+            <p>【东莞1】明生银行应用高速签名盒子，实现银企直联安全性全面提升。</p>
+            <span class="send_time">2018-12-23</span>
+          </a>
+        </li>
+         <li>
+            <i class="icon-point_blue"></i>
+          <a href="specialSafeguard_details.html">
+            <p>【东莞1】明生银行应用高速签名盒子，实现银企直联安全性全面提升。</p>
+            <span class="send_time">2018-12-23</span>
+          </a>
+        </li>
+         <li>
+            <i class="icon-point_blue"></i>
+          <a href="specialSafeguard_details.html">
+            <p>【东莞1】明生银行应用高速签名盒子，实现银企直联安全性全面提升。</p>
+            <span class="send_time">2018-12-23</span>
+          </a>
+        </li>
+         <li>
+            <i class="icon-point_blue"></i>
+          <a href="specialSafeguard_details.html">
+            <p>【东莞1】明生银行应用高速签名盒子，实现银企直联安全性全面提升。</p>
+            <span class="send_time">2018-12-23</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="page">
+      <span class="totle">共100条</span>
+      <div class="box" id="wrap1">
+
+      </div>
+    </div>
+  </div>
+  <script src="js/footer.js"></script>
+  <script src="js/pagination.js"></script>
+  <script>
+    var onPagechange = function (page) {
+      console.log('当前点击页码', page);
+    }
+    var obj = {
+      wrapid: 'wrap1', //页面显示分页器容器id
+      total: 100, //总条数
+      pagesize: 10, //每页显示10条
+      currentPage: 1, //当前页
+      onPagechange: onPagechange,
+      //btnCount:7 页数过多时，显示省略号的边界页码按钮数量，可省略，且值是大于5的奇数
+    }
+    pagination.init(obj);
+  </script>
+</body>
+
+</html>

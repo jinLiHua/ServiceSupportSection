@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>下载中心</title>
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/pagination.css">
+  <script src="js/jquery.min.js"></script>
+  <style>
+    .download-center_content {
+      width: 1000px;
+      margin: auto;
+      margin-top: 10px;
+      overflow: hidden;
+    }
+
+    .download-center_left {
+      width: 200px;
+      float: left;
+      text-align: center;
+      background: #fff;
+    }
+
+    .download-center_left p {
+      padding: 24px 0;
+      background-color: #145ab9;
+      color: #fff;
+    }
+
+    .download-center_left li {
+      padding: 16px 10px 16px 20px;
+      border-bottom: 1px solid #f7f7f7;
+      text-align: left;
+      cursor: pointer;
+    }
+
+    .symbol {
+      float: right;
+    }
+
+    .data-download_active {
+      color: #145ab9;
+    }
+
+    .download-center_right {
+      float: right;
+      width: 780px;
+      background: #fff;
+      padding: 20px;
+    }
+    a{
+      color: #000;
+    }
+    .load_dialog{
+      height: 120%;
+      width: 100%;
+      background-color: rgba(1, 1, 1, 0.4);
+      position: absolute;
+      z-index: 3;
+    }
+    .load_dialog div{
+      height: 239px;
+       width: 330px;
+      background: url('./img/bg_dialog.png') no-repeat;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      margin: auto;
+    }
+    .load_dialog input{
+      height: 38px;
+      border-radius: 4px;
+      width: 240px;
+    }
+    .load_dialog h3,
+    .load_dialog input,
+    .load_dialog button,
+    .load_dialog i{
+      position: absolute;
+      cursor: pointer;
+    }
+   .load_dialog i{
+     display: inline-block;
+     width: 40px;
+     height: 40px;
+      background: url(./img/icon-close.png) no-repeat;
+      right: 0;
+    }
+    .load_dialog button{
+      left: 106px;
+      top: 176px;
+      width: 103px;
+      height: 33px;
+      background-color: transparent;
+      color: transparent; 
+    }
+    .around-dynamic_list li p{
+      font-size: 16px;
+    }
+    .around-dynamic_list li span{
+      float: right;
+    }
+    .icon-point_blue{
+      margin-top: 4px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="load_dialog display_none">
+    <div>
+      <i>
+      </i>
+      <h3 style="left: 118px;
+          top: 64px;">授权下载码</h3>
+      <input type="text" style="left: 36px;
+          top: 110px;">
+      <button>确定</button>
+    </div>
+  </div>
+  <script src="js/header.js"></script>
+  <div class="download-center_content">
+    <div class="download-center_left">
+      <p>下载中心</p>
+      <ul>
+        <li class="data-download_active" data-type="formData">
+          <span>表单资料下载</span>
+          <span class="symbol">></span>
+        </li>
+        <li data-type="audioAndVideoData">
+          <span>声像资料下载</span>
+          <span class="symbol">></span>
+        </li>
+        <li data-type="softwareData">
+          <span>软件工具下载</span>
+          <span class="symbol">></span>
+        </li>
+        <li data-type="technologyData">
+          <span>技术资料下载</span>
+          <span class="symbol">></span>
+        </li>
+      </ul>
+    </div>
+    <div class="download-center_right">
+      <div class="around-dynamic_title">
+        <h1> 新闻动态</h1>
+        <div>
+          <a href="./index.html">
+            <i class="icon-index">
+              <img src="./img/home.png" alt="home">
+            </i>
+            首页</a>
+          <span>></span>
+          <span>下载中心</span>
+          <span>></span>
+          <span class="downd_type">表单资料下载</span>
+        </div>
+      </div>
+      <ul class="around-dynamic_list display_none" data-type="formData">
+        <li>
+            <i class="icon-point_blue"></i>
+          <a href="javascript:;">
+            <p>【东莞】明生银行应用高速签名盒子，实现银企直联安全性全面提升。</p>
+            <span class="send_time">2018-12-23</span>
+          </a>
+        </li>
+
+       <li>
+            <i class="icon-point_blue"></i>
+          <a href="javascript:;">
+            <p>【东莞】明生银行应用高速签名盒子，实现银企直联安全性全面提升。</p>
+            <span class="send_time">2018-12-23</span>
+          </a>
+        </li>
+       <li>
+            <i class="icon-point_blue"></i>
+          <a href="javascript:;">
+            <p>【东莞】明生银行应用高速签名盒子，实现银企直联安全性全面提升。</p>
+            <span class="send_time">2018-12-23</span>
+          </a>
+        </li>
+       <li>
+            <i class="icon-point_blue"></i>
+          <a href="javascript:;">
+            <p>【东莞】明生银行应用高速签名盒子，实现银企直联安全性全面提升。</p>
+            <span class="send_time">2018-12-23</span>
+          </a>
+        </li>
+       <li>
+            <i class="icon-point_blue"></i>
+          <a href="javascript:;">
+            <p>【东莞】明生银行应用高速签名盒子，实现银企直联安全性全面提升。</p>
+            <span class="send_time">2018-12-23</span>
+          </a>
+        </li>
+       <li>
+            <i class="icon-point_blue"></i>
+          <a href="javascript:;">
+            <p>【东莞】明生银行应用高速签名盒子，实现银企直联安全性全面提升。</p>
+            <span class="send_time">2018-12-23</span>
+          </a>
+        </li>
+       <li>
+            <i class="icon-point_blue"></i>
+          <a href="javascript:;">
+            <p>【东莞】明生银行应用高速签名盒子，实现银企直联安全性全面提升。</p>
+            <span class="send_time">2018-12-23</span>
+          </a>
+        </li>
+       <li>
+            <i class="icon-point_blue"></i>
+          <a href="javascript:;">
+            <p>【东莞】明生银行应用高速签名盒子，实现银企直联安全性全面提升。</p>
+            <span class="send_time">2018-12-23</span>
+          </a>
+        </li>
+       <li>
+            <i class="icon-point_blue"></i>
+          <a href="javascript:;">
+            <p>【东莞】明生银行应用高速签名盒子，实现银企直联安全性全面提升。</p>
+            <span class="send_time">2018-12-23</span>
+          </a>
+        </li>
+      </ul>
+      <ul class="around-dynamic_list display_none " data-type="audioAndVideoData">
+       <li>
+            <i class="icon-point_blue"></i>
+          <a href="javascript:;">
+            <p>1【东莞】明生银行应用高速签名盒子，实现银企直联安全性全面提升。</p>
+            <span class="send_time">2018-12-23</span>
+          </a>
+        </li>
+
+       <li>
+            <i class="icon-point_blue"></i>
+          <a href="javascript:;">
+            <p>1【东莞】明生银行应用高速签名盒子，实现银企直联安全性全面提升。</p>
+            <span class="send_time">2018-12-23</span>
+          </a>
+        </li>
+       <li>
+            <i class="icon-point_blue"></i>
+          <a href="javascript:;">
+            <p>1【东莞】明生银行应用高速签名盒子，实现银企直联安全性全面提升。</p>
+            <span class="send_time">2018-12-23</span>
+          </a>
+        </li>
+       <li>
+            <i class="icon-point_blue"></i>
+          <a href="javascript:;">
+            <p>1【东莞】明生银行应用高速签名盒子，实现银企直联安全性全面提升。</p>
+            <span class="send_time">2018-12-23</span>
+          </a>
+        </li>
+       <li>
+            <i class="icon-point_blue"></i>
+          <a href="javascript:;">
+            <p>1【东莞】明生银行应用高速签名盒子，实现银企直联安全性全面提升。</p>
+            <span class="send_time">2018-12-23</span>
+          </a>
+        </li>
+       <li>
+            <i class="icon-point_blue"></i>
+          <a href="javascript:;">
+            <p>1【东莞】明生银行应用高速签名盒子，实现银企直联安全性全面提升。</p>
+            <span class="send_time">2018-12-23</span>
+          </a>
+        </li>
+       <li>
+            <i class="icon-point_blue"></i>
+          <a href="javascript:;">
+            <p>1【东莞】明生银行应用高速签名盒子，实现银企直联安全性全面提升。</p>
+            <span class="send_time">2018-12-23</span>
+          </a>
+        </li>
+      </ul>
+      <ul class="around-dynamic_list display_none " data-type="softwareData">
+       <li>
+            <i class="icon-point_blue"></i>
+          <a href="javascript:;">
+            <p>2【东莞】明生银行应用高速签名盒子，实现银企直联安全性全面提升。</p>
+            <span class="send_time">2018-12-23</span>
+          </a>
+        </li>
+       <li>
+            <i class="icon-point_blue"></i>
+          <a href="javascript:;">
+            <p>2【东莞】明生银行应用高速签名盒子，实现银企直联安全性全面提升。</p>
+            <span class="send_time">2018-12-23</span>
+          </a>
+        </li>
+       <li>
+            <i class="icon-point_blue"></i>
+          <a href="javascript:;">
+            <p>2【东莞】明生银行应用高速签名盒子，实现银企直联安全性全面提升。</p>
+            <span class="send_time">2018-12-23</span>
+          </a>
+        </li>
+       <li>
+            <i class="icon-point_blue"></i>
+          <a href="javascript:;">
+            <p>2【东莞】明生银行应用高速签名盒子，实现银企直联安全性全面提升。</p>
+            <span class="send_time">2018-12-23</span>
+          </a>
+        </li>
+       <li>
+            <i class="icon-point_blue"></i>
+          <a href="javascript:;">
+            <p>2【东莞】明生银行应用高速签名盒子，实现银企直联安全性全面提升。</p>
+            <span class="send_time">2018-12-23</span>
+          </a>
+        </li>
+       <li>
+            <i class="icon-point_blue"></i>
+          <a href="javascript:;">
+            <p>2【东莞】明生银行应用高速签名盒子，实现银企直联安全性全面提升。</p>
+            <span class="send_time">2018-12-23</span>
+          </a>
+        </li>
+       <li>
+            <i class="icon-point_blue"></i>
+          <a href="javascript:;">
+            <p>2【东莞】明生银行应用高速签名盒子，实现银企直联安全性全面提升。</p>
+            <span class="send_time">2018-12-23</span>
+          </a>
+        </li>
+       <li>
+            <i class="icon-point_blue"></i>
+          <a href="javascript:;">
+            <p>2【东莞】明生银行应用高速签名盒子，实现银企直联安全性全面提升。</p>
+            <span class="send_time">2018-12-23</span>
+          </a>
+        </li>
+
+
+      </ul>
+      <ul class="around-dynamic_list display_none " data-type="technologyData">
+       <li>
+            <i class="icon-point_blue"></i>
+          <a href="javascript:;">
+            <p>3【东莞】明生银行应用高速签名盒子，实现银企直联安全性全面提升。</p>
+            <span class="send_time">2018-12-23</span>
+          </a>
+        </li>
+       <li>
+            <i class="icon-point_blue"></i>
+          <a href="javascript:;">
+            <p>3【东莞】明生银行应用高速签名盒子，实现银企直联安全性全面提升。</p>
+            <span class="send_time">2018-12-23</span>
+          </a>
+        </li>
+       <li>
+            <i class="icon-point_blue"></i>
+          <a href="javascript:;">
+            <p>3【东莞】明生银行应用高速签名盒子，实现银企直联安全性全面提升。</p>
+            <span class="send_time">2018-12-23</span>
+          </a>
+        </li>
+      </ul>
+      <div class="page">
+        <span class="totle">共100条</span>
+        <div class="box" id="wrap1">
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/footer.js"></script>
+  <script src="js/pagination.js"></script>
+  <script>
+    var dataObj = {
+      formData:'表单资料下载',
+      audioAndVideoData:'声像资料下载',
+      softwareData:'软件工具下载',
+      technologyData:'技术资料下载',
+    }
+    function GetQueryString(name) {
+      var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+      var r = window.location.search.substr(1).match(reg);
+      if (r != null) return unescape(r[2]);
+      return null;
+    }
+    var dataType = GetQueryString('type');
+    $('.around-dynamic_list[data-type=' + dataType + ']').removeClass('display_none');
+    $('.downd_type').text(dataObj[dataType]);
+    $('.download-center_left ul li').each(function (index, val) {
+      if (dataType == $(val).attr('data-type')) {
+        $('.download-center_left ul li').removeClass('data-download_active');
+        $(val).addClass('data-download_active');
+       
+      }
+    })
+    // ----------------左侧-菜单点击
+    $('.download-center_left ul').on('click', 'li', function () {
+      obj.currentPage = 1;
+      pagination.init(obj);
+      $('.downd_type').text(dataObj[$(this).attr('data-type')]);
+      $('.download-center_left ul li').removeClass('data-download_active');
+      $(this).addClass('data-download_active');
+      $('.around-dynamic_list').addClass('display_none');
+      $('.around-dynamic_list[data-type=' + $(this).attr('data-type') + ']').removeClass('display_none');
+    })
+    $('.around-dynamic_list').on('click', 'li', function () {
+      $('.load_dialog').removeClass('display_none');
+      $('body').css('overflow', 'hidden')
+    })
+    $('.load_dialog').on('click', 'i,button', function () {
+      $('.load_dialog').addClass('display_none');
+      $('body').css('overflow', 'auto');
+    })
+
+
+    var onPagechange = function (page) {
+      console.log('当前点击页码', page);
+    }
+    var obj = {
+      wrapid: 'wrap1', //页面显示分页器容器id
+      total: 100, //总条数
+      pagesize: 10, //每页显示10条
+      currentPage: 1, //当前页
+      onPagechange: onPagechange,
+      //btnCount:7 页数过多时，显示省略号的边界页码按钮数量，可省略，且值是大于5的奇数
+    }
+    pagination.init(obj);
+  </script>
+</body>
+
+</html>

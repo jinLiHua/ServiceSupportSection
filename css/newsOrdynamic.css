@@ -1,0 +1,17 @@
+.around-dynamic_list li:hover .new_desc p.desc {
+  color: #999;
+}
+
+.around-dynamic_list li:hover .send_time {
+  background-color: #145ab9;
+  border-color: #145ab9;
+
+}
+
+.around-dynamic_list li:hover .send_time span,
+.around-dynamic_list li:hover .send_time p {
+  color: #fff;
+}
+.new_desc a p{
+  font-size: 22px;
+}
